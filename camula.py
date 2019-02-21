@@ -6,5 +6,6 @@ print("bla")
 print("corno lindo")
 =======
 print("carvao musculoso")
-print("xaxsxsaxas")
+print("xaxsxsaxas
+print("RAMOZI LINDO")
 >>>>>>> refs/remotes/origin/master
