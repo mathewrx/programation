@@ -1,3 +1,6 @@
+import peewee, os
+from animal import *
+
 class Consulta(peewee.Model):
     data = peewee.CharField()
     servico = peewee.CharField()
@@ -26,10 +29,19 @@ if __name__=="__main__":
 
     print("TESTE DO ANIMAL")
 
-    al = Animal(nomedono = "Ricardo", tipo_animal = "C", raca = "Rusky")
+    al = Animal(nomedono = "Ricardo ", tipo_animal = " VIra Lata", raca = " Rusky")
     print(al)
 
     print("TESTE DA CONSULTA")
-    cl = Consulta(data = "19/09/2018", servico = "Consulta de rotina", horario = "14:00", animal = al, confirma = "N", myID = "c9dsadsa8dasdga9"
+    cl = Consulta(data = "19/09/2018", servico = "Consulta de rotina", horario = "14:00", animal = al, confirma = "N", myID = "c9dsadsa8dasdga9")
     print(cl)
+
+    print("TESTE DA PERSISTENCIA")
+    al.save()
+    cl.save()
+    c2 = Consulta(data = "21/09/2018", servico = "Aplicação de vacina", horario = "10:00", animal = al, confirma = "S", myID = "d9firtu343uit")
+    c2.save
+    todos = Consulta.select()
+    for con in todos:
+        print(con)
 

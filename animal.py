@@ -12,4 +12,7 @@ class Animal(peewee.Model):
     
     def __str__ (self):
         return self.tipo_animal+","+ self.raca + "de" + self.nomedono
+
+
+
         
